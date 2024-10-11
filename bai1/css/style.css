@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.layout {
+    background-color: beige;
+}
+
+#header {
+    background-color: rgb(41, 35, 35);
+}
+
+#content {
+    padding-top: 7%;
+    margin: 0 auto; /* Căn giữa nội dung */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 300px;
+}
+
+.content-left {
+    flex: 1;
+    padding: 10px; /* Thêm padding nếu cần */
+    height: 20%;
+    background-color: aqua;
+}
+
+.content-right {
+    flex: 1;
+    padding: 10px; /* Thêm padding nếu cần */
+    height: 20%;
+    background-color: blueviolet;
+
+}
+
+#footer {
+    background-color: rgb(41, 35, 35);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    #content {
+        flex-direction: column; /* Chuyển thành cột trên màn hình nhỏ */
+    }
+    .content-left, .content-right {
+        width: 100%; /* Đảm bảo cả hai chiếm toàn bộ chiều rộng */
+    }
+}
